@@ -46,7 +46,6 @@ class Anilist:
         counter = 0 # number of displayed results from search
         for i in range(len(data['data']['Page']['media'])):
             curr_anime = data['data']['Page']['media'][i]['title']['romaji']
-            print(f"{counter + 1}. {curr_anime}")
             max_result = i + 1
             counter += 1 #do not change anything here
         
@@ -78,7 +77,6 @@ class Anilist:
         '''
 
         anime_ids = self.getAnimeID(anime_name)
-        print(anime_ids)
         if anime_ids == -1:
             return "None" # no need to return a list
         multi_dict = []
